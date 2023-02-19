@@ -6,45 +6,48 @@ using namespace std;
 
 int main()
 {
+
 	int choice = 0;
+	int count = 0;
 
 	string name = "";
-	string age = "";
+    string age = "";
 	string occup = "";
 
-	while (choice != -1)
+	while (count <= 2)
 	{
 		cout << "-1: Exit\n";
 		cout << "1: Enter Name\n";
-		cout << "2: Enter Age\n";
+		cout << "2: Enter age\n";
 		cout << "3: Enter Occupation\n";
 		cin >> choice;
 
-		/*if (choice == -1)
-			break;*/
+		if (choice == -1)
+			break;
 
 		switch (choice)
 		{
-		case 1:
-			cout << "What is your Name: ";
-			cin >> name;
-			break;
-		case 2:
-			cout << "What is your Age? ";
-			cin >> age;
-			break;
-		case 3:
-			cout << "What is your Occupation? ";
-			cin >> occup;
-			break;
-		default:
-			// Assume Invalid Menu Choice
-			cout << "Sorry that choice is not valid!";
-			break;
-		}
+			case 1:
+				cout << "What is your Name: ";
+				cin >> name;
+				count += 1;
+				break;
+			case 2:
+				cout << "What is your Age? ";
+				cin >> age;
+				count += 1;
+				break;
+			case 3:
+				cout << "What is your Occupation? ";
+				cin >> occup;
+				count += 1;
+				break;
+			default:
+				// Assume Invalid Menu Choice
+				cout << "Sorry that choice is not valid!";
+				break;
+		}	
 	}
-
-	age += 1;
 
 	cout << "Thank you for using our application, " << name << " and hope your career in " << occup << " is successful.";
 	cout << "Hope your " << age << " birthday will enjoyable and exciting";
