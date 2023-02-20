@@ -8,13 +8,13 @@ int main()
 {
 
 	int choice = 0;
-	int count = 0;
+	int count = 0; // solution: intialized count to allow program to record users input
 
 	string name = "";
     string age = "";
 	string occup = "";
 
-	while (count <= 2)
+	while (count <= 2) // error: condition set to improper value terminating the program prematurely. Error resolved by replacing "choice" with "count" and settting the condition to "<= 2"
 	{
 		cout << "-1: Exit\n";
 		cout << "1: Enter Name\n";
@@ -30,17 +30,17 @@ int main()
 			case 1:
 				cout << "What is your Name: ";
 				cin >> name;
-				count += 1;
+				count += 1; // solution: added count increment allowing the program to keep track of the users inputs
 				break;
 			case 2:
 				cout << "What is your Age? ";
 				cin >> age;
-				count += 1;
+				count += 1; // solution: added count increment allowing the program to keep track of the users inputs
 				break;
 			case 3:
 				cout << "What is your Occupation? ";
 				cin >> occup;
-				count += 1;
+				count += 1; // solution: added count increment allowing the program to keep track of the users inputs
 				break;
 			default:
 				// Assume Invalid Menu Choice
